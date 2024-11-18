@@ -44,58 +44,29 @@ export default function ResearchSubmitted() {
       setJobEmail(data.jobById.email);
       setJobNotes(data.jobById.notes);
       setWorkflows(data.jobById.workflows);
-      fetchXMLFile();
     },
     onError: (error: any) => {
       console.log(error.networkError?.result?.errors);
     }
   });
-
-  const fetchXMLFile = async () => {
-    try {
-      if (!workflows.length || !workflows[0]?.nodes?.[0]?.formData) {
-        return;
-      }
-      const formData = workflows[0].nodes[0].formData;
-      const response = await axios({
-        method: 'POST',
-        url: "http://127.0.0.1:5000/",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        data: {
-          "Vector": formData[0].value,
-          "Insert": formData[1].value,
-          "First Restriction Site": formData[2].value,
-          "Second Restriction Site": formData[3].value,
-        }
-      });
   
-    setXmlFile(new Blob([response.data], { type: 'application/xml' }));
-    const xmlUrl = URL.createObjectURL(new Blob([response.data], { type: 'application/xml' }));
-    setValue(xmlUrl);
-    // setShowXML(true);
-    } catch (error) {
-      console.error('Error fetching XML file:', error);
-    }
-  };
-
-
-
-
+  
+  
+  
+  
+  
   const [username, setUsername] = useState('');
   const [instance, setInstance] = useState('');
   const [password, setPassword] = useState('');
-
+  
   const handleSubmit = (event: React.FormEvent) => {
-      event.preventDefault();
-      // Handle login logic here
-      console.log('Instance:', instance);
-      console.log('Username:', username);
-      console.log('Password:', password);
+    event.preventDefault();
+    // Handle login logic here
+    console.log('Instance:', instance);
+    console.log('Username:', username);
+    console.log('Password:', password);
   };
-
+  
   const handleLogin = async () => {
     try {
       const response = await axios.post(
@@ -114,7 +85,7 @@ export default function ResearchSubmitted() {
       console.error('Error logging in:', error);
     }
   };
-
+  
   const handleSubmitToSynBioHub = async (tokenString: string) => {
     try {
       const token = tokenString; // Replace with your actual token
@@ -127,7 +98,7 @@ export default function ResearchSubmitted() {
       const overwrite_merge = '0'; // Replace with your actual overwrite_merge
       const filename = jobId; // Replace with your actual filename
       const synBioHubURL = instance; // Replace with your actual SynBioHub URL
-
+      
       const formData = new FormData();
       formData.append('id', id);
       formData.append('version', version);
@@ -136,7 +107,7 @@ export default function ResearchSubmitted() {
       formData.append('citations', citations);
       formData.append('overwrite_merge', overwrite_merge);
       formData.append('file', xmlFile, filename);
-
+      
       const response = await axios.post(`${synBioHubURL}/submit`, formData, {
         headers: {
           'Accept': 'text/plain',
@@ -144,18 +115,47 @@ export default function ResearchSubmitted() {
           'Content-Type': 'multipart/form-data',
         },
       });
-
+      
       console.log('Submission successful:', response.data);
       window.open(response.data, '_blank');
     } catch (error) {
       console.error('Error submitting to SynBioHub:', error);
     }
   };
-
+  
   useEffect(() => {
-    console.log(workflows);
-  }, [workflows]);
-
+    const fetchXMLFile = async () => {
+      try {
+        if (!workflows.length || !workflows[0]?.nodes?.[0]?.formData) {
+          return;
+        }
+        const formData = workflows[0].nodes[0].formData;
+        console.log(formData)
+        const response = await axios({
+          method: 'POST',
+          url: "http://127.0.0.1:5000/",
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          data: {
+            "Vector": formData[0].value,
+            "Insert": formData[1].value,
+            "First Restriction Site": formData[2].value,
+            "Second Restriction Site": formData[3].value,
+          }
+        });
+        setXmlFile(new Blob([response.data], { type: 'application/xml' }));
+        const xmlUrl = URL.createObjectURL(new Blob([response.data], { type: 'application/xml' }));
+        setValue(xmlUrl);
+        // setShowXML(true);
+      } catch (error) {
+        console.error('Error fetching XML file:', error);
+      }
+    };
+  fetchXMLFile();  
+}, [workflows]);
+  
   return (
     <>
     <Box>
