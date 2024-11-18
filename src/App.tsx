@@ -26,6 +26,7 @@ import TestPage       from './pages/TestPage';
 import './App.css';
 import './styles/dominos.css';
 import { AdminEdit } from './pages/AdminEdit';
+import SbhUpload from './pages/SBH_Upload';
 
 function App() {
 
@@ -91,6 +92,7 @@ function App() {
                     <Route path = "/checkout"            element = {<PrivateRouteClient> <Checkout />                 </PrivateRouteClient>} />
                     <Route path = "/submitted"           element = {<PrivateRouteClient> <JobSubmitted />             </PrivateRouteClient>} />
                     <Route path = "/designPDF"           element = {<PrivateRouteClient> <ResearchSubmitted />        </PrivateRouteClient>} />
+                    <Route path = "/SBH_Upload"           element = {<PrivateRouteClient> <SbhUpload />               </PrivateRouteClient>} />
 
                     <Route path = "/technician_view/:id" element = {<PrivateRouteAdmin> <TechnicianView />            </PrivateRouteAdmin>} />
                     <Route path = "/dashboard"           element = {<PrivateRouteAdmin> <Dashboard client={client} /> </PrivateRouteAdmin>} />

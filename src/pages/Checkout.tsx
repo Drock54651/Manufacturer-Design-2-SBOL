@@ -68,6 +68,7 @@ export default function Checkout() {
       //Add call to create SBOL file here -- breadcrumb --
       console.log("successfully created pdf:", data);
       navigate("/designPDF", { state: { id: data.createJob.id } });
+      //navigate("/SBH_Upload", { state: { id: data.createJob.id } });
       let fileName = `${data.createJob.id}_${new Date().toLocaleString()}`;
       let file = {
         fileName: fileName,
@@ -75,7 +76,7 @@ export default function Checkout() {
         edges: val.edges,
       };
       localStorage.setItem(fileName, JSON.stringify(file));
-      console.log("successfully created job:", data);
+      //console.log("successfully created job:", data);
       //navigate("/submitted", { state: { id: data.createJob.id } });
       let jobFileName = `${data.createJob.id}_${new Date().toLocaleString()}`;
       let jobFile = {
