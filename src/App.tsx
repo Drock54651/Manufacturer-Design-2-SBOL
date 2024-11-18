@@ -16,6 +16,7 @@ import TechnicianView from './pages/TechnicianView';
 import Dominos        from './pages/Dominos';
 import Dashboard      from './pages/Dashboard';
 import JobSubmitted   from './pages/JobSubmitted';
+import ResearchSubmitted from './pages/DesignSubmitted';
 import ELabs          from './pages/ELabs';
 import Kernel         from './pages/Kernel';
 import ReleaseNotes   from './pages/ReleaseNotes';
@@ -89,6 +90,7 @@ function App() {
                     <Route path = "/resubmission/:id"    element = {<PrivateRouteClient> <MainFlow client={client} /> </PrivateRouteClient>} />
                     <Route path = "/checkout"            element = {<PrivateRouteClient> <Checkout />                 </PrivateRouteClient>} />
                     <Route path = "/submitted"           element = {<PrivateRouteClient> <JobSubmitted />             </PrivateRouteClient>} />
+                    <Route path = "/designPDF"           element = {<PrivateRouteClient> <ResearchSubmitted />        </PrivateRouteClient>} />
 
                     <Route path = "/technician_view/:id" element = {<PrivateRouteAdmin> <TechnicianView />            </PrivateRouteAdmin>} />
                     <Route path = "/dashboard"           element = {<PrivateRouteAdmin> <Dashboard client={client} /> </PrivateRouteAdmin>} />

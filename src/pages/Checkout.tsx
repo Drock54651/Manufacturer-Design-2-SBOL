@@ -65,8 +65,9 @@ export default function Checkout() {
 
   const [createJob] = useMutation(CREATE_JOB, {
     onCompleted: (data) => {
-      console.log("successfully created job:", data);
-      navigate("/submitted", { state: { id: data.createJob.id } });
+      //Add call to create SBOL file here -- breadcrumb --
+      console.log("successfully created pdf:", data);
+      navigate("/designPDF", { state: { id: data.createJob.id } });
       let fileName = `${data.createJob.id}_${new Date().toLocaleString()}`;
       let file = {
         fileName: fileName,
@@ -74,6 +75,16 @@ export default function Checkout() {
         edges: val.edges,
       };
       localStorage.setItem(fileName, JSON.stringify(file));
+      console.log("successfully created job:", data);
+      //navigate("/submitted", { state: { id: data.createJob.id } });
+      let jobFileName = `${data.createJob.id}_${new Date().toLocaleString()}`;
+      let jobFile = {
+        fileName: jobFileName,
+        nodes: val.nodes,
+        edges: val.edges,
+      };
+      localStorage.setItem(jobFileName, JSON.stringify(jobFile));
+
     },
     onError: (error: any) => {
       console.log("error creating job", error.networkError?.result?.errors);
