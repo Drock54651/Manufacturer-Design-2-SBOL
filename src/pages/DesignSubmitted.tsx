@@ -50,25 +50,36 @@ export default function ResearchSubmitted() {
     }
   });
 
-  /* -- breadcrumb -- This should be where the XML file gets retrieved*/
   const fetchXMLFile = async () => {
     try {
-      const response = await axios.get('https://example.com/mockup-xml-file', {
+      if (!workflows.length || !workflows[0]?.nodes?.[0]?.formData) {
+        return;
+      }
+      const formData = workflows[0].nodes[0].formData;
+      const response = await axios({
+        method: 'POST',
+        url: "http://127.0.0.1:5000/",
         headers: {
-          'Accept': 'application/xml',
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        responseType: 'blob',
+        data: {
+          "Vector": formData[0].value,
+          "Insert": formData[1].value,
+          "First Restriction Site": formData[2].value,
+          "Second Restriction Site": formData[3].value,
+        }
       });
-
-      setXmlFile(new Blob([response.data], { type: 'application/xml' }));
-      const xmlUrl = URL.createObjectURL(new Blob([response.data], { type: 'application/xml' }));
-      setValue(xmlUrl);
-      setShowXML(true);
+  
+    setXmlFile(new Blob([response.data], { type: 'application/xml' }));
+    const xmlUrl = URL.createObjectURL(new Blob([response.data], { type: 'application/xml' }));
+    setValue(xmlUrl);
+    setShowXML(true);
     } catch (error) {
       console.error('Error fetching XML file:', error);
     }
   };
-  //fetchXMLFile();
+  fetchXMLFile();
 
 
 
