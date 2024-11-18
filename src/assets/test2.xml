@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:sbol="http://sbols.org/v3#"
+>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature1/Range1">
+    <sbol:displayId>Range1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/Constraint1">
+    <sbol:displayId>Constraint1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Constraint"/>
+    <sbol:restriction rdf:resource="http://sbols.org/v3#meets"/>
+    <sbol:subject rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature1"/>
+    <sbol:object rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/Modular_Cloning_assembly_plan">
+    <sbol:displayId>Modular_Cloning_assembly_plan</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000241"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/Modular_Cloning_assembly_plan/ExternallyDefined1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature2/Range1">
+    <sbol:displayId>Range1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb">
+    <sbol:displayId>part5_in_bb</sbol:displayId>
+    <sbol:name>part5_in_bb</sbol:name>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000985"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb_seq"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature1"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature2"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3"/>
+    <sbol:hasConstraint rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/Constraint1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5">
+    <sbol:displayId>part5</sbol:displayId>
+    <sbol:name>part5</sbol:name>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5Sequence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3/Range1">
+    <sbol:displayId>Range1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb">
+    <sbol:displayId>part9_in_bb</sbol:displayId>
+    <sbol:name>part9_in_bb</sbol:name>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    <sbol:type rdf:resource="https://identifiers.org/SO:0000987"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000985"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000804"/>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb_seq"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature1"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature2"/>
+    <sbol:hasFeature rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3"/>
+    <sbol:hasConstraint rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/Constraint1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9">
+    <sbol:displayId>part9</sbol:displayId>
+    <sbol:name>part9</sbol:name>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9Sequence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature2">
+    <sbol:displayId>SequenceFeature2</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#SequenceFeature"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000366"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature2/Range1"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature2/Range2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature2/Range2">
+    <sbol:displayId>Range2</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb_seq">
+    <sbol:displayId>part9_in_bb_seq</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Sequence"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:elements>tagc</sbol:elements>
+    <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3/Range2">
+    <sbol:displayId>Range2</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature1">
+    <sbol:displayId>SequenceFeature1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#SequenceFeature"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000915"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature1/Range1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3">
+    <sbol:displayId>SequenceFeature3</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#SequenceFeature"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3/Range1"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3/Range2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature2">
+    <sbol:displayId>SequenceFeature2</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#SequenceFeature"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000366"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature2/Range1"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature2/Range2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3">
+    <sbol:displayId>SequenceFeature3</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#SequenceFeature"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3/Range1"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3/Range2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature2/Range1">
+    <sbol:displayId>Range1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9Sequence">
+    <sbol:displayId>part9Sequence</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Sequence"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:elements>tagc</sbol:elements>
+    <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb_seq">
+    <sbol:displayId>part5_in_bb_seq</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Sequence"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:elements>gcta</sbol:elements>
+    <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/vectorSequence">
+    <sbol:displayId>vectorSequence</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Sequence"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:elements>atcg</sbol:elements>
+    <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature1/Range1">
+    <sbol:displayId>Range1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5_in_bb/SequenceFeature3/Range1">
+    <sbol:displayId>Range1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part5_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature2/Range2">
+    <sbol:displayId>Range2</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/Modular_Cloning_assembly_plan/ExternallyDefined1">
+    <sbol:displayId>ExternallyDefined1</sbol:displayId>
+    <sbol:name>SapI</sbol:name>
+    <rdf:type rdf:resource="http://sbols.org/v3#ExternallyDefined"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000252"/>
+    <sbol:definition rdf:resource="http://rebase.neb.com/rebase/enz/SapI.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3/Range2">
+    <sbol:displayId>Range2</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Range"/>
+    <sbol:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sbol:order>
+    <sbol:hasSequence rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb_seq"/>
+    <sbol:start rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sbol:start>
+    <sbol:end rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sbol:end>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/Insert_Plasmid">
+    <sbol:displayId>Insert_Plasmid</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Sequence"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:elements>gcta</sbol:elements>
+    <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part5Sequence">
+    <sbol:displayId>part5Sequence</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Sequence"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:elements>gcta</sbol:elements>
+    <sbol:encoding rdf:resource="https://identifiers.org/edam:format_1207"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/Insert">
+    <sbol:displayId>Insert</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/Vector_Plasmid">
+    <sbol:displayId>Vector_Plasmid</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Component"/>
+    <sbol:hasNamespace rdf:resource="http://sbolstandard.org/testfiles"/>
+    <sbol:type rdf:resource="https://identifiers.org/SBO:0000251"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature1">
+    <sbol:displayId>SequenceFeature1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#SequenceFeature"/>
+    <sbol:role rdf:resource="https://identifiers.org/SO:0000915"/>
+    <sbol:hasLocation rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature1/Range1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sbolstandard.org/testfiles/part9_in_bb/Constraint1">
+    <sbol:displayId>Constraint1</sbol:displayId>
+    <rdf:type rdf:resource="http://sbols.org/v3#Constraint"/>
+    <sbol:restriction rdf:resource="http://sbols.org/v3#meets"/>
+    <sbol:subject rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature1"/>
+    <sbol:object rdf:resource="http://sbolstandard.org/testfiles/part9_in_bb/SequenceFeature3"/>
+  </rdf:Description>
+</rdf:RDF>
