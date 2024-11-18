@@ -26,10 +26,10 @@ export default function ResearchSubmitted() {
   const [jobNotes, setJobNotes] = useState('');
   const [workflows, setWorkflows] = useState<Workflow[]>([]);
   const [xmlFile, setXmlFile] = useState(new Blob());
-  const [showXML, setShowXML] = useState(false);
-
+  // const [showXML, setShowXML] = useState(false);
+  
   const navigate = useNavigate();
-
+  
   const { loading, error, data } = useQuery(GET_JOB_BY_ID, {
     variables: { id: jobId },
     onCompleted: (data) => {
@@ -44,6 +44,7 @@ export default function ResearchSubmitted() {
       setJobEmail(data.jobById.email);
       setJobNotes(data.jobById.notes);
       setWorkflows(data.jobById.workflows);
+      fetchXMLFile();
     },
     onError: (error: any) => {
       console.log(error.networkError?.result?.errors);
@@ -74,12 +75,12 @@ export default function ResearchSubmitted() {
     setXmlFile(new Blob([response.data], { type: 'application/xml' }));
     const xmlUrl = URL.createObjectURL(new Blob([response.data], { type: 'application/xml' }));
     setValue(xmlUrl);
-    setShowXML(true);
+    // setShowXML(true);
     } catch (error) {
       console.error('Error fetching XML file:', error);
     }
   };
-  fetchXMLFile();
+
 
 
 
